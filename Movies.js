@@ -5,6 +5,13 @@
             let vm = this;
             vm.movies = movieService.getData();
             console.log(vm.movies);
+            vm.listInfo = function (index) {
+                let m = {
+                    title: vm.movies[index].title
+                }
+                vm.addWatch = movieService.watchList(m);
+            }
+            
         },
 
         template: `<p>Search here to filter</p>
@@ -14,7 +21,7 @@
             <p>{{m.overview}}</p>
             <p>ID:{{m.id}}</p>
             <p>Vote Average:{{m.vote_average}}</p>
-            <button ng-click="vm.addMovie($index)">Add</button>
+            <button ng-click="$ctrl.listInfo($index)">Add</button>
             </div>
             `
     };

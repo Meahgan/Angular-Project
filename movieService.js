@@ -19,15 +19,12 @@
 
       //-----watchList array-------//
 
-      function watchList(title, info, rating) {
+      function watchList(md) {
         console.log("hey");//md = MovieDetails
-        let details = [{
-          title: title,
-          info: info,
-          rating: rating
-        }];
-        console.log("details");
-        details.push(details);
+        
+        let details = [];
+        console.log(details);
+        details.push(md);
       }
 
         const searchMovies = function (title) {
