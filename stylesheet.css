@@ -1,0 +1,29 @@
+a {
+  display: flex;
+  width: 150px;
+  text-decoration: none;
+  padding: 10px;
+  color: gray;
+  font-size: 25px;
+  font-family: Courier;
+
+}
+.navbar {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  width: 100%;
+  height: 30%;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+.welcome {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  font-size: 30px;
+  font-family: Courier;
+  font-style: bold;
+}
