@@ -19,6 +19,7 @@
         template: `<p>Search here to filter</p>
             <input ng-model="searchText.title">
             <div ng-repeat="m in $ctrl.movies | filter: movieFilter track by $index">
+            <img src="http://image.tmdb.org/t/p/w185{{m.poster_path}}" >
             <h2 ng-model="title">{{m.title}}</h2>
             <p>{{m.overview}}</p>
             <p>ID:{{m.id}}</p>
