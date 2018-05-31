@@ -2,17 +2,20 @@
 {
 
   let watchList = {
-    template: `<p>My Watch List</p>
-                <div ng-repeat="md in $ctrl.movieDetails">
-                <h2>{{m.title}}</h2>
-                </div>
-                `,
+    template: `
+          <h1>My Movie List</h1>
+            <div ng-repeat="wm in movieService.movieDetails">
+              <h2 ng-model="title">{{wm.title}}</h2>
+              <p>{{wm.overview}}</p>
+              <p>ID:{{wm.id}}</p>
+              <p>Vote Average:{{wm.vote_average}}</p>
+            </div>`,
 
-    controller: function (movieService) {
+    controller: function (watchList) {
       let vm = this;
-      vm.list = movieService.getData();
+      vm.list = watchList.getData();
       console.log(vm.list);
-    },
+    }
 
   }
 

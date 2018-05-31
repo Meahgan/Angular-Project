@@ -2,8 +2,8 @@
 {
     function movieService($http) {
         let data = [{
-            title: "Tommy Boi",
-            length: "2 hours"
+            title: "Eggage",
+            length: "32 days"
         }];
 
 
@@ -22,8 +22,18 @@
       function watchList(md) {
         console.log(movieDetails);
         movieDetails.push(md);
+        const getData = function () {
+            return data;
+        };
+        //Update data
+        const setData = function (newData) {
+            data = newData;
+        };
       }
-      let movieDetails = [];
+      let movieDetails = [{
+        title: "Tommy Boi",
+        length: "2 hours" 
+      }];
 
       //search API by title
         const searchMovies = function (title) {
@@ -31,7 +41,6 @@
             console.log(url);
             return $http.get(url).then(function (response) {
                 console.log(response.data.results);
-                //console.log(response.data.results[0]);
                 setData(response.data.results);
             });
         };

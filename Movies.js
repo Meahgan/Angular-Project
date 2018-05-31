@@ -13,7 +13,6 @@
                 }
                 vm.addWatch = movieService.watchList(x);
             }
-            
         },
 
         template: `<p>Search here to filter</p>
