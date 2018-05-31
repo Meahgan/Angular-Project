@@ -6,10 +6,12 @@
             vm.movies = movieService.getData();
             console.log(vm.movies);
             vm.listInfo = function (index) {
-                let m = {
-                    title: vm.movies[index].title
+                let x = {
+                    title: vm.movies[index].title,
+                    overview: vm.movies[index].overview,
+                    ratings: vm.movies[index].vote_average
                 }
-                vm.addWatch = movieService.watchList(m);
+                vm.addWatch = movieService.watchList(x);
             }
             
         },

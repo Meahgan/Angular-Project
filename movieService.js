@@ -20,13 +20,12 @@
       //-----watchList array-------//
 
       function watchList(md) {
-        console.log("hey");//md = MovieDetails
-        
-        let details = [];
-        console.log(details);
-        details.push(md);
+        console.log(movieDetails);
+        movieDetails.push(md);
       }
+      let movieDetails = [];
 
+      //search API by title
         const searchMovies = function (title) {
             let url = `https://api.themoviedb.org/3/search/movie?api_key=${APIKey}&query=${title}`;
             console.log(url);
@@ -58,7 +57,8 @@
             getData,
             setData,
             searchMovies,
-            watchList
+            watchList,
+            movieDetails
         };
     }
     angular

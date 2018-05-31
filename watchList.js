@@ -3,7 +3,7 @@
 
   let watchList = {
     template: `<p>My Watch List</p>
-                <div ng-repeat="m in $ctrl.movies">
+                <div ng-repeat="md in $ctrl.movieDetails">
                 <h2>{{m.title}}</h2>
                 </div>
                 `,
