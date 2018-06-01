@@ -9,11 +9,16 @@
               <p>{{wm.overview}}</p>
               <p>ID:{{wm.id}}</p>
               <p>Vote Average:{{wm.vote_average}}</p>
+              <button ng-click="$ctrl.removie($index)">Remove Movie</button>
             </div>`,
 
     controller: function (movieService) {
       let vm = this;
       vm.list = movieService.getMovie();
+      vm.removie = function(index){
+        vm.remove = movieService.removie(index);
+      } 
+      
       console.log(vm.list);
     }
 

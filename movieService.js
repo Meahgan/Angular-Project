@@ -26,12 +26,28 @@
 
         const getMovie = function () {
             return movieDetails;
-        };      
+        };  
+          
+
+        const removie = function(index){
+            movieDetails.splice(index, 1);
+        };
 
       let movieDetails = [{
-        title: "Placeholder Movie",
+        title: "THE Movie",
         length: "13m" 
-      }];
+      },
+      {
+        title: "Egg Movie",
+        overview: "13m",
+        ratings: 4.5
+      },
+      {
+          title: "Foodfight!",
+          overview: "Dex, a superdog sleuth, is the law of the land whe…e on the forces of evil and the devilish Brand X.",
+          ratings: 2.3
+      }
+    ];
 
       //search API by title
         const searchMovies = function (title) {
@@ -66,7 +82,8 @@
             searchMovies,
             watchList,
             movieDetails,
-            getMovie
+            getMovie,
+            removie
         };
     }
     angular
