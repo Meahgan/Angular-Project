@@ -9,10 +9,14 @@
                 let x = {
                     title: vm.movies[index].title,
                     overview: vm.movies[index].overview,
-                    ratings: vm.movies[index].vote_average
+                    ratings: vm.movies[index].vote_average,
+                    date: vm.movies[index].release_date,
+                    popularity: vm.movies[index].popularity,
+                    language: vm.movies[index].original_language
                 }
                 vm.addWatch = movieService.watchList(x);
             }
+
         },
 
         template: `<p>Search here to filter</p>
@@ -23,7 +27,13 @@
             <p>{{m.overview}}</p>
             <p>ID:{{m.id}}</p>
             <p>Vote Average:{{m.vote_average}}</p>
+            <div ng-show="details">
+            <p>Date: {{m.release_date}}</p>
+            <p>Popularity: {{m.popularity}}</p>
+            <p>Language: {{m.original_language}}</p>
+            </div>
             <button class="button" ng-click="$ctrl.listInfo($index)">Add</button>
+            <button class="button" ng-click="details =! details">Details</button>
             </div>
             `
     };

@@ -4,7 +4,7 @@
         let data = [{
             title: "Eggage",
             length: "32 days"
-        }, 
+        },
     {
         title: "Honk",
         length: "12 seconds"
@@ -34,8 +34,8 @@
 
         const getMovie = function () {
             return movieDetails;
-        };  
-          
+        };
+
 
         const removie = function(index){
             movieDetails.splice(index, 1);
@@ -43,7 +43,12 @@
 
       let movieDetails = [{
         title: "THE Movie",
-        length: "13m" 
+        length: "13m",
+        id: "62156",
+        ratings: 6.3,
+        date: "",
+        popularity: "",
+        language:""
       },
       {
         title: "Egg Movie",
@@ -93,6 +98,7 @@
             movieDetails,
             getMovie,
             removie
+
         };
     }
     angular
