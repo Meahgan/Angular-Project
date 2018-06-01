@@ -6,8 +6,8 @@ a {
   color: gray;
   font-size: 25px;
   font-family: Courier;
-
 }
+
 .navbar {
   display: flex;
   flex-direction: column;
@@ -16,7 +16,6 @@ a {
   height: 30%;
   justify-content: flex-start;
   align-items: center;
-
 }
 
 .welcome {
@@ -26,25 +25,4 @@ a {
   font-size: 30px;
   font-family: Courier;
   font-style: bold;
-}
-
-.button {
-  padding: 6px 13px;
-  font-size: 13px;
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  color: #fff;
-  background-color: #9b4caf;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 5px #999;
-}
-
-.button:hover {background-color: #602e6d}
-
-.button:active {
-  background-color: #9b4caf;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
 }

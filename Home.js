@@ -4,6 +4,7 @@
         template: `<div class="welcome"> Welcome to the MOVIE page! </div>
         <p>Please type in a movie to search for here:</p>
         <input ng-model="$ctrl.title" placeholder="Movie Title"/>
+        <input ng-model="$ctrl.overview" placeholder="Movie Genre"/>
         <button class="button" ng-click="$ctrl.getMovie()"> Grab a movie! </button>
         `,
         controller: function (movieService, $location) {
