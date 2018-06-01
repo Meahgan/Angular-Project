@@ -23,7 +23,7 @@
             <p>{{m.overview}}</p>
             <p>ID:{{m.id}}</p>
             <p>Vote Average:{{m.vote_average}}</p>
-            <button ng-click="$ctrl.listInfo($index)">Add</button>
+            <button class="button" ng-click="$ctrl.listInfo($index)">Add</button>
             </div>
             `
     };
