@@ -4,7 +4,15 @@
         let data = [{
             title: "Eggage",
             length: "32 days"
-        }];
+        }, 
+    {
+        title: "Honk",
+        length: "12 seconds"
+    },
+{
+    title: "Trailer Trash Barbie",
+    length: "32 minutes"
+}];
 
 
         let APIKey = "a53a6bc42972a9ac76757aa3b5089827";
@@ -40,6 +48,7 @@
       {
         title: "Egg Movie",
         overview: "13m",
+        id: "423433",
         ratings: 4.5
       },
       {
