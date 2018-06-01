@@ -62,7 +62,15 @@
               });
             };
       //search API by genre
-      //
+      const searchYear = function (date) {
+          let url = `https://api.themoviedb.org/3/discover/movie?api_key=${APIKey}&release_date.gte=${date}&sort_by=release_date.asc`;
+          console.log(url);
+          return $http.get(url).then(function (response) {
+              console.log(response.data.results);
+              setData(response.data.results);
+            });
+          };
+
 
         const getMovieDetail = function (movieId) {
             let url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${APIKey}`;
@@ -86,6 +94,7 @@
             setData,
             searchMovies,
             searchRatings,
+            searchYear,
             watchList,
             movieDetails,
             getMovie,
