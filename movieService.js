@@ -22,17 +22,15 @@
       function watchList(md) {
         console.log(movieDetails);
         movieDetails.push(md);
-        const getData = function () {
-            return data;
-        };
-        //Update data
-        const setData = function (newData) {
-            data = newData;
-        };
       }
+
+        const getMovie = function () {
+            return movieDetails;
+        };      
+
       let movieDetails = [{
-        title: "Tommy Boi",
-        length: "2 hours" 
+        title: "Placeholder Movie",
+        length: "13m" 
       }];
 
       //search API by title
@@ -67,7 +65,8 @@
             setData,
             searchMovies,
             watchList,
-            movieDetails
+            movieDetails,
+            getMovie
         };
     }
     angular
