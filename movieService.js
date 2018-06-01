@@ -51,7 +51,18 @@
                 console.log(response.data.results);
                 setData(response.data.results);
             });
-        };
+          };
+      //search API by rating
+        const searchRatings = function (ratings) {
+            let url = `https://api.themoviedb.org/3/discover/movie?api_key=${APIKey}&vote_average.gte=${ratings}&sort_by=vote_average.asc`;
+            console.log(url);
+            return $http.get(url).then(function (response) {
+                console.log(response.data.results);
+                setData(response.data.results);
+              });
+            };
+      //search API by genre
+      //
 
         const getMovieDetail = function (movieId) {
             let url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${APIKey}`;
@@ -74,6 +85,7 @@
             getData,
             setData,
             searchMovies,
+            searchRatings,
             watchList,
             movieDetails,
             getMovie,
