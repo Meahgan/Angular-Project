@@ -41,27 +41,7 @@
             movieDetails.splice(index, 1);
         };
 
-      let movieDetails = [{
-        title: "THE Movie",
-        length: "13m",
-        id: "62156",
-        ratings: 6.3,
-        date: "",
-        popularity: "",
-        language:""
-      },
-      {
-        title: "Egg Movie",
-        overview: "13m",
-        id: "423433",
-        ratings: 4.5
-      },
-      {
-          title: "Foodfight!",
-          overview: "Dex, a superdog sleuth, is the law of the land whe…e on the forces of evil and the devilish Brand X.",
-          ratings: 2.3
-      }
-    ];
+      let movieDetails = [];
 
       //search API by title
         const searchMovies = function (title) {

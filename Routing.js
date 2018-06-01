@@ -13,6 +13,9 @@
         .when("/watchList", {
           template: "<watch-list></watch-list>"
         })
+        .when("/details", {
+          template: "<details></details>"
+        })
         .otherwise({ redirectTo: "/home" });
     });
 }

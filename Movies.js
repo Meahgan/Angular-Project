@@ -7,6 +7,7 @@
             console.log(vm.movies);
             vm.listInfo = function (index) {
                 let x = {
+                    img: vm.movies[index].poster_path,
                     title: vm.movies[index].title,
                     overview: vm.movies[index].overview,
                     ratings: vm.movies[index].vote_average,
@@ -25,7 +26,7 @@
             <img ng-if="m.poster_path != null" ng-src="http://image.tmdb.org/t/p/w185{{m.poster_path}}">
             <h2 ng-model="title">{{m.title}}</h2>
             <p>{{m.overview}}</p>
-            <p>ID:{{m.id}}</p>
+
             <p>Vote Average:{{m.vote_average}}</p>
             <div ng-show="details">
             <p>Date: {{m.release_date}}</p>
