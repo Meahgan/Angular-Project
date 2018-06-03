@@ -1,14 +1,26 @@
 "use strict";
 {
     let home = {
-        template: `<div class="welcome"> Welcome to the MOVIE page! </div>
-        <p>Please type in a movie to search for here:</p>
+        template: `
+        <div class="welcome"> WELCOME TO THE MOVIE HUB! </div>
+
+        <div class="searchMovies"><p>Search movies by title, ratings, or date!</p></div>
+        <div id="searchInputs">
+        <div class="searchTitle">
         <input ng-model="$ctrl.title" placeholder="Movie Title"/>
+        <button class="button" ng-click="$ctrl.getMovie()">GO</button>
+        </div>
+
+        <div class="searchRatings">
         <input ng-model="$ctrl.ratings" placeholder="Movie Rating (0-10)"/>
+        <button class="button" ng-click="$ctrl.searchRatings()">GO</button>
+        </div>
+
+        <div class="searchYear">
         <input ng-model="$ctrl.date" placeholder="Year"/>
-        <button class="button" ng-click="$ctrl.getMovie()"> Grab a movie! </button>
-        <button class="button" ng-click="$ctrl.searchRatings()"> Search Rated Movies! </button>
-        <button class="button" ng-click="$ctrl.searchYear()"> Search Year! </button>
+        <button class="button" ng-click="$ctrl.searchYear()">GO</button>
+        </div>
+        </div>
 
         `,
         controller: function (movieService, $location) {

@@ -2,17 +2,21 @@
 {
 
   let watchList = {
-    template: `
+    template: `<div id="listContainer">
+    <div id="movies">
           <h1>My Movie List</h1>
-            <div ng-repeat="wm in $ctrl.list">
+          <div class="homeLink"><a href="index.html">Add Some Movies!</a></div>
+            <div class="list" ng-repeat="wm in $ctrl.list">
             <img ng-src="http://image.tmdb.org/t/p/w185{{wm.img}}">
               <h2 ng-model="title">{{wm.title}}</h2>
               <p>{{wm.overview}}</p>
-              <p>Vote Average: {{wm.ratings}}</p>
-              <p>Date: {{wm.date}}</p>
-              <p>Popularity: {{wm.popularity}}</p>
+              <p>Vote Average:</p><p class="ratings">{{wm.ratings}}</p>
+              <p>Date:</p><p class="date"> {{wm.date}}</p>
+              <p>Popularity:</p><p class="popularity" {{wm.popularity}}</p>
               <p>Language: {{wm.language}}</p>
-              <button class="button" ng-click="$ctrl.removie($index)">Remove Movie</button>
+              <button class="buttonX" ng-click="$ctrl.removie($index)">X</button>
+            </div>
+            </div>
             </div>`,
 
     controller: function (movieService) {

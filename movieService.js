@@ -63,7 +63,7 @@
             };
       //search API by genre
       const searchYear = function (date) {
-          let url = `https://api.themoviedb.org/3/discover/movie?api_key=${APIKey}&release_date.gte=${date}&sort_by=release_date.asc`;
+          let url = `https://api.themoviedb.org/3/discover/movie?api_key=${APIKey}&release_date.lte=${date}&sort_by=release_date.desc`;
           console.log(url);
           return $http.get(url).then(function (response) {
               console.log(response.data.results);

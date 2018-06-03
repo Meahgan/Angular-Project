@@ -20,21 +20,22 @@
 
         },
 
-        template: `<p>Search here to filter</p>
-            <input ng-model="searchText.title">
-            <div ng-repeat="m in $ctrl.movies | filter: searchText.title track by $index">
+        template: `<div class="search"> <p>Search here to filter</p>
+            <div class="filter"><input ng-model="searchText.title"></div>
+            <div class="moviesList" ng-repeat="m in $ctrl.movies | filter: searchText.title track by $index">
             <img ng-if="m.poster_path != null" ng-src="http://image.tmdb.org/t/p/w185{{m.poster_path}}">
-            <h2 ng-model="title">{{m.title}}</h2>
+            <h2 class="movieTitle" ng-model="title">{{m.title}}</h2>
             <p>{{m.overview}}</p>
 
-            <p>Vote Average:{{m.vote_average}}</p>
+            <p>Vote Average:  {{m.vote_average}}</p>
             <div ng-show="details">
-            <p>Date: {{m.release_date}}</p>
-            <p>Popularity: {{m.popularity}}</p>
-            <p>Language: {{m.original_language}}</p>
+            <p>Date:  {{m.release_date}}</p>
+            <p>Popularity:  {{m.popularity}}</p>
+            <p>Language:  {{m.original_language}}</p>
             </div>
             <button class="button" ng-click="$ctrl.listInfo($index)">Add</button>
-            <button class="button" ng-click="details =! details">Details</button>
+            <button class="buttonDetails" ng-click="details =! details">Details</button>
+            </div>
             </div>
             `
     };
