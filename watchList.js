@@ -31,6 +31,7 @@
 
   }
 
+//--injecting the movie service--//
   watchList.$inject = ["movieService"];
 
   angular
