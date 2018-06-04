@@ -23,6 +23,9 @@
         </div>
 
         `,
+
+//-------functions for search settings and retrieving movies----//
+
         controller: function (movieService, $location) {
             let vm = this;
             vm.title = "";

@@ -24,8 +24,7 @@
         const setData = function (newData) {
             data = newData;
         };
-
-      //-----watchList array-------//
+//-----------watchList array------------//
 
       function watchList(md) {
         console.log(movieDetails);
@@ -43,7 +42,7 @@
 
       let movieDetails = [];
 
-      //search API by title
+//------------search API by title-------------//
         const searchMovies = function (title) {
             let url = `https://api.themoviedb.org/3/search/movie?api_key=${APIKey}&query=${title}`;
             console.log(url);
@@ -52,7 +51,7 @@
                 setData(response.data.results);
             });
           };
-      //search API by rating
+//-------------search API by rating---------------//
         const searchRatings = function (ratings) {
             let url = `https://api.themoviedb.org/3/discover/movie?api_key=${APIKey}&vote_average.gte=${ratings}&sort_by=vote_average.asc`;
             console.log(url);
@@ -61,7 +60,7 @@
                 setData(response.data.results);
               });
             };
-      //search API by genre
+//--------------search API by genre--------------//
       const searchYear = function (date) {
           let url = `https://api.themoviedb.org/3/discover/movie?api_key=${APIKey}&release_date.lte=${date}&sort_by=release_date.desc`;
           console.log(url);
@@ -79,13 +78,13 @@
 
             });
 
-            const getDetails = function () {
-                return details;
-            }
-
-            const setDetails = function (d) {
-                let details = d;
-            }
+            // const getDetails = function () {
+            //     return details;
+            // }
+            //
+            // const setDetails = function (d) {
+            //     let details = d;
+            // }
 
         }
 
